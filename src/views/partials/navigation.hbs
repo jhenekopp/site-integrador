@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">SOBRE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">PROJETO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section4">CONTATO</a>
+          </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              CONFIGURAÇÕES
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/class/sala">Minha Página</a>
+              <a class="dropdown-item" href="/notes">Todas as notas</a>
+              <a class="dropdown-item" href="/notes/add">Adicionar anotação</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/users/logout">Sair</a>
+            </div>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signin">ENTRAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signup">CADASTRAR</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

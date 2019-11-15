@@ -1,0 +1,28 @@
+<div class="row">
+  {{#each notes}}
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title d-flex justify-content-between align-items-center" >
+          {{ title }} <a href="/notes/edit/{{_id}}"><ion-icon name="clipboard"><ion-icon name=""></ion-icon></a>
+        </h4>
+        <p>{{ description }}</p>
+        <!-- Apagar anotacao -->
+        <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn  btn-block ">Apagar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <!-- Pagina inicial do usuario -->
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h1>Olá {{user.name}}</h1>
+      <p clsss="lead">Não existe nenhuma anotação.</p>
+      <a href="/notes/add" class="btn btn-block">Criar um</a>
+    </div>
+  </div>
+  {{/each}}
+</div>

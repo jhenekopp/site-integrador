@@ -1,0 +1,73 @@
+<div class="form-row">
+  <div class="form-group col-md-10 mx-auto">
+    <div class="card">
+      <div class="card-header" style="font-size: 18px ">
+        Registrar conta
+      </div>
+      <div class="card-body">
+        <form action="/users/signup" method="POST">
+          <div class="form-group">
+            <label for="inputName">Nome Completo</label>
+            <input type="text" class="form-control" name="name" placeholder="Nome" value="{{name}}">
+          </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="text" class="form-control" name="email" placeholder="fulano@gmail.com" value="{{email}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword">Senha</label>
+            <input type="password" class="form-control" name="password" placeholder="Senha" value="{{password}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputConfirm_Password">Confirmação da senha</label>
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirmar Senha" value="{{confirm_password}}">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6 ">
+            <label for="inputAddress">Endereço</label>
+            <input type="text" class="form-control" name="address" placeholder="Rua, bairro, N" value="{{address}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputAddress2">Complemento</label>
+            <input type="text" class="form-control" name="address2" placeholder="Apartamento, bloco..." value="{{address2}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputCity">Cidade</label>
+            <input type="text" class="form-control" name="city" placeholder="Cidade" value="{{city}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputState">Estado</label>
+            <input type="text" class="form-control" name="state" placeholder="Estado" value="{{state}}">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6 ">
+            <label for="inputUniversity">Universidade</label>
+            <input type="text" class="form-control" name="university" placeholder="Faculdade, Universidade" value="{{University}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputCourse">Curso</label>
+            <input type="text" class="form-control" name="course" placeholder="Cursos" value="{{course}}">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputAno">Ano</label>
+            <input type="text" class="form-control" name="ano" placeholder="Ano" value="{{ano}}">
+          </div>
+          <div class="form-group">
+            <label class="col-md-6 control-label" for="arquivo">Anexar o curriculo</label>
+              <div class="col-md-6">
+                <input type="file" class="input-file" name="arquivo" placeholder="Arquivo.pdf" value="{{arquivo}}">
+                <span class="help-block"></span>
+              </div>
+          </div>
+        </div>
+          <button class="btn2 btn-block">
+            Cadastrar 
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
